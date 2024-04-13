@@ -139,6 +139,7 @@ export const AsideBar = () => {
           <>
             <ul>
               {items.map((item) => (
+                // eslint-disable-next-line react/jsx-key
                 <S.CartItemContainer>
                   <S.CartItem>
                     <img src={item.foto} alt={item.nome} />

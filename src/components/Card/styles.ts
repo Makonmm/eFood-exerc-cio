@@ -1,4 +1,4 @@
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 import { colors } from '../../styles'
 import { TagStyled } from '../Tag/styles'
 import { CardProps } from '.'

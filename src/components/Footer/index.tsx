@@ -1,8 +1,8 @@
+import { Logo } from '../Logo'
+import * as S from './styles'
 import facebook from '../../assets/images/facebook.png'
 import instagram from '../../assets/images/instagram.png'
 import twitter from '../../assets/images/twitter.png'
-import { Logo } from '../Logo'
-import * as S from './styles'
 
 const Footer = () => {
   return (
