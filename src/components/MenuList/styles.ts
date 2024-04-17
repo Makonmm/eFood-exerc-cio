@@ -15,7 +15,7 @@ export const MenuListContainer = styled.section`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 60px;
+    padding: 16px;
     gap: 24px;
   }
 `

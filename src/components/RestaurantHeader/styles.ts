@@ -20,8 +20,8 @@ export const HeaderContainer = styled.header`
 `
 
 export const Title = styled.h2`
-  margin-bottom: 16px; /* Adicionando margem inferior entre o título e o botão */
-  width: 108px;
+  margin-bottom: 16px;
+  width: 100%;
   text-align: center;
   font-size: 18px;
 
