@@ -70,13 +70,13 @@ export const AsideBar = () => {
       address: Yup.string().required('Campo Obrigatório'),
       city: Yup.string().required('Campo Obrigatório'),
       cep: Yup.string()
-        .min(9, 'Digite o CEP completo')
+        .min(9, 'Digite o CEP')
         .max(10)
         .required('Campo Obrigatório'),
       homeNumber: Yup.string().required('Campo Obrigatório'),
       apartment: Yup.string(),
       cardOwner: Yup.string()
-        .min(5, 'Insira o nome como consta no cartão')
+        .min(5, 'Insira o nome que consta no cartão')
         .required('Campo Obrigatório'),
       cardNumber: Yup.string()
         .min(16, 'Número inválido')

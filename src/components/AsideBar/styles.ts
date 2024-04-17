@@ -28,7 +28,7 @@ export const AsideContainer = styled.div`
 `
 
 export const SideBar = styled.aside`
-  background-color: ${colors.vermelho};
+  background-color: ${colors.pink};
   z-index: 1;
   padding: 32px 8px;
   max-width: 360px;
@@ -41,7 +41,7 @@ export const SideBar = styled.aside`
   h4 {
     display: flex;
     justify-content: space-between;
-    color: ${colors.bege};
+    color: ${colors.beige};
     font-weight: 700;
     margin-bottom: 16px;
     font-size: 14px;
@@ -55,7 +55,7 @@ export const SideBar = styled.aside`
 `
 
 export const CartItemContainer = styled.li`
-  background-color: ${colors.bege};
+  background-color: ${colors.beige};
   margin-bottom: 16px;
   padding: 8px 8px 12px 8px;
   position: relative;
@@ -73,7 +73,7 @@ export const CartItemContainer = styled.li`
 
 export const CartItem = styled.div`
   display: flex;
-  color: ${colors.vermelho};
+  color: ${colors.pink};
   gap: 8px;
 
   h3 {
@@ -94,14 +94,14 @@ export const CartItem = styled.div`
 
 export const FormsTitles = styled.h3`
   font-size: 16px;
-  color: ${colors.bege};
+  color: ${colors.beige};
   font-weight: 700;
   margin-bottom: 16px;
 `
 
 export const ConfirmationMessage = styled.p`
   font-size: 14px;
-  color: ${colors.bege};
+  color: ${colors.beige};
   font-weight: 400;
 `
 
@@ -133,13 +133,13 @@ export const InputGroup = styled.div`
   }
 
   label {
-    color: ${colors.bege};
+    color: ${colors.beige};
     font-size: 14px;
     font-weight: 700;
   }
 
   input {
-    background-color: ${colors.bege};
+    background-color: ${colors.beige};
     border: none;
     width: 100%;
     height: 32px;

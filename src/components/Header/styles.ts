@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
-import heroBg from '../../assets/images/Vector.png'
+import hero from '../../assets/images/Vector.png'
 
-export const HeroBg = styled.div`
-  background-image: url(${heroBg});
+export const Hero = styled.div`
+  background-image: url(${hero});
   height: 384px;
   margin-bottom: 80px;
 `
@@ -17,7 +17,7 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-  color: ${colors.vermelho};
+  color: ${colors.pink};
   font-weight: 900;
   margin-top: 138px;
   width: 540px;

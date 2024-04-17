@@ -100,11 +100,11 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
 
       {modalIsOpen && (
         <>
-          <S.ModalContainer className="container">
-            <div
-              className="overlay"
-              onClick={() => setModalIsOpen(false)}
-            ></div>
+          <S.ModalContainer
+            className="container"
+            onClick={() => setModalIsOpen(false)}
+          >
+            <div className="overlay"></div>
             <img
               src={close}
               alt="Ícone de fechar"
@@ -131,7 +131,6 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
                 )}`}</ButtonStyle>
               </div>
             </S.ModalContent>
-            <div className="overlay"></div>
           </S.ModalContainer>
         </>
       )}

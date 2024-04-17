@@ -7,10 +7,10 @@ import { ButtonStyle } from '../Button/styled'
 export const CardContainer = styled.div<CardProps>`
   max-width: ${(props) => (props.isrestaurant ? '472px' : '320px')};
   width: 100%;
-  color: ${(props) => (props.isrestaurant ? colors.vermelho : colors.bege)};
+  color: ${(props) => (props.isrestaurant ? colors.pink : colors.beige)};
   background-color: ${(props) =>
-    props.isrestaurant ? colors.branco : colors.vermelho};
-  border: ${(props) => props.isrestaurant && `1px solid ${colors.vermelho}`};
+    props.isrestaurant ? colors.white : colors.pink};
+  border: ${(props) => props.isrestaurant && `1px solid ${colors.pink}`};
   border-top: none;
   position: relative;
   padding: ${(props) => !props.isrestaurant && '8px'};
@@ -78,7 +78,7 @@ export const Score = styled.div`
 export const ModalContainer = styled.div`
   width: 1024px;
   height: 344px;
-  background-color: ${colors.vermelho};
+  background-color: ${colors.pink};
   padding: 32px;
   position: fixed;
   top: 50%;
@@ -110,11 +110,12 @@ export const ModalContainer = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-  color: ${colors.branco};
+  color: ${colors.white};
   gap: 24px;
   font-weight: 200;
-  background-color: ${colors.vermelho};
+  background-color: ${colors.pink};
   padding: 32px;
+  width: 1024px;
 
   div {
     width: 656px;

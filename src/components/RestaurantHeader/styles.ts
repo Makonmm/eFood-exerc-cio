@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import bg from '../../assets/images/Vector.png'
+import headerB from '../../assets/images/Vector.png'
 import { colors } from '../../styles'
 
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
-  color: ${colors.vermelho};
+  color: ${colors.pink};
   font-weight: bold;
   line-height: 21px;
 `
@@ -19,7 +20,7 @@ export const Title = styled.h2`
 `
 
 export const CartButton = styled.h3`
-  margin-left: 193px;
+  margin-left: 194px;
   width: 256px;
   text-align: right;
   font-size: 18px;
@@ -27,6 +28,6 @@ export const CartButton = styled.h3`
 `
 
 export const HeaderBackground = styled.div`
-  background-image: url(${bg});
+  background-image: url(${headerB});
   height: 186px;
 `

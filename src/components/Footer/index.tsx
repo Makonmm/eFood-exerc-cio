@@ -7,13 +7,13 @@ import twitter from '../../assets/images/twitter.png'
 const Footer = () => {
   return (
     <>
-      <S.FooterBg>
+      <S.Footer>
         <S.FooterContainer className="container">
           <Logo />
           <S.SocialMedias>
-            <img src={instagram} alt="" />
-            <img src={facebook} alt="" />
-            <img src={twitter} alt="" />
+            <img src={instagram} alt="Instagram" />
+            <img src={facebook} alt="Facebook" />
+            <img src={twitter} alt="Twitter" />
           </S.SocialMedias>
           <p>
             A efood é uma plataforma para divulgação de estabelecimentos, a
@@ -21,7 +21,7 @@ const Footer = () => {
             estabelecimento contratado
           </p>
         </S.FooterContainer>
-      </S.FooterBg>
+      </S.Footer>
     </>
   )
 }

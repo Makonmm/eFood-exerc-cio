@@ -21,7 +21,7 @@ const cartSlice = createSlice({
       if (!dish) {
         state.items.push(action.payload)
       } else {
-        alert('O item já está no carrinho')
+        alert('O item já foi adicionado')
       }
     },
     open: (state) => {

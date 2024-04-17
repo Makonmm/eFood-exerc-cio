@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-export const FooterBg = styled.div`
-  background-color: ${colors.bege};
+export const Footer = styled.div`
+  background-color: ${colors.beige};
   margin-top: 80px;
 
   p {
     width: 480px;
     height: 24px;
-    color: ${colors.vermelho};
-    font-weight: 400px;
-    font-size: 10px;
+    color: ${colors.pink};
+    font-weight: bold;
+    font-size: 12px;
     text-align: center;
   }
 `
@@ -28,7 +28,7 @@ export const SocialMedias = styled.ul`
   column-gap: 8px;
 
   li {
-    background-color: ${colors.vermelho};
+    background-color: ${colors.pink};
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -38,8 +38,8 @@ export const SocialMedias = styled.ul`
     position: relative;
 
     a {
-      color: ${colors.bege};
-      font-size: 12px;
+      color: ${colors.beige};
+      font-size: 14px;
     }
   }
 `

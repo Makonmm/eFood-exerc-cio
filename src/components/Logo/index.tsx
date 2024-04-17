@@ -5,7 +5,7 @@ import { LogoStyle } from './styles'
 export const Logo = () => {
   return (
     <Link to="/">
-      <LogoStyle src={logo} alt="logo efood" />
+      <LogoStyle src={logo} alt="logo da eFood" />
     </Link>
   )
 }

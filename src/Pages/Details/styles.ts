@@ -16,7 +16,8 @@ export const BannerImage = styled.div`
   bottom: 0;
   left: 0;
   background-size: cover;
-  filter: brightness(0.5);
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
 `
 
 export const Container = styled.div`
@@ -25,7 +26,7 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100%;
   row-gap: 156px;
-  color: ${colors.branco};
+  color: ${colors.white};
 `
 
 export const Category = styled.h3`

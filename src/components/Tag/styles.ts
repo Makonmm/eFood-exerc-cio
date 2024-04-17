@@ -7,8 +7,8 @@ export const TagStyled = styled.div`
   column-gap: 8px;
 
   div {
-    background-color: ${colors.vermelho};
-    color: ${colors.bege};
+    background-color: ${colors.pink};
+    color: ${colors.beige};
     font-weight: 700;
     padding: 6px 4px;
     font-size: 12px;
