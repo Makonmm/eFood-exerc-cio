@@ -35,6 +35,7 @@ export const CardContainer = styled.div<CardProps>`
     width: 100%;
     margin-bottom: 16px;
     height: 100%;
+    padding: 16px;
 
     > img {
       width: 100%;

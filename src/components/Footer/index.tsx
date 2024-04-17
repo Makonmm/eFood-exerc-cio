@@ -11,9 +11,15 @@ const Footer = () => {
         <S.FooterContainer className="container">
           <Logo />
           <S.SocialMedias>
-            <img src={instagram} alt="Instagram" />
-            <img src={facebook} alt="Facebook" />
-            <img src={twitter} alt="Twitter" />
+            <a href="#">
+              <img src={instagram} alt="Instagram" />
+            </a>
+            <a href="#">
+              <img src={facebook} alt="Facebook" />
+            </a>
+            <a href="#">
+              <img src={twitter} alt="Twitterr" />
+            </a>
           </S.SocialMedias>
           <p>
             A efood é uma plataforma para divulgação de estabelecimentos, a
