@@ -12,4 +12,10 @@ export const MenuListContainer = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 60px;
+    gap: 24px;
+  }
 `

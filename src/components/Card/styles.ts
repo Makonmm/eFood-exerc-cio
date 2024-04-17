@@ -29,6 +29,18 @@ export const CardContainer = styled.div<CardProps>`
     object-fit: cover;
     cursor: ${(props) => !props.isrestaurant && 'pointer'};
   }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 16px;
+    height: 100%;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `
 
 export const CardInfo = styled.div<CardProps>`
@@ -42,6 +54,13 @@ export const CardInfo = styled.div<CardProps>`
     font-weight: ${(props) => (props.isrestaurant ? `700` : `900`)};
     margin-top: ${(props) => (props.isrestaurant ? '-4px' : '4px')};
   }
+
+  @media (max-width: 768px) {
+    padding: ${(props) => props.isrestaurant && '8px'};
+    display: ${(props) => !props.isrestaurant && 'flex'};
+    flex-direction: ${(props) => !props.isrestaurant && 'column'};
+    gap: ${(props) => !props.isrestaurant && '8px'};
+  }
 `
 
 export const Description = styled.p<CardProps>`
@@ -51,6 +70,15 @@ export const Description = styled.p<CardProps>`
   width: ${(props) => (props.isrestaurant ? '456px' : '304px')};
   height: 88px;
   line-height: 22px;
+
+  @media (max-width: 768px) {
+    margin-bottom: ${(props) => props.isrestaurant && '16px'};
+    font-weight: 200;
+    font-size: 14px;
+    width: ${(props) => (props.isrestaurant ? '456px' : '100%')};
+    height: 88px;
+    line-height: 22px;
+  }
 `
 
 export const CardHeader = styled.div<CardProps>`
@@ -59,19 +87,27 @@ export const CardHeader = styled.div<CardProps>`
   align-items: center;
   font-size: 18px;
   margin-bottom: ${(props) => (props.isrestaurant ? '16px' : '0px')};
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 export const Score = styled.div`
   display: flex;
   align-items: center;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 900;
   gap: 8px;
   margin-top: -4px;
 
   span {
     width: 26px;
-    height: 21px;
+    height: 22px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `
 
@@ -105,6 +141,27 @@ export const ModalContainer = styled.div`
     height: 100vh;
     z-index: -1;
     background-color: rgba(0, 0, 0, 0.73);
+  }
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    height: auto;
+    padding: 16px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    justify-content: flex-end;
+
+    > img {
+      top: auto;
+      bottom: 8px;
+      right: 8px;
+    }
+
+    .overlay {
+      display: none;
+    }
   }
 `
 
@@ -140,10 +197,20 @@ export const ModalContent = styled.div`
       padding: 4px 8px;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    width: 100%;
+  }
 `
 
 export const ModalImage = styled.img`
   width: 280px;
   height: 280px;
   object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `

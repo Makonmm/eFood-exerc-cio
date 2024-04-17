@@ -13,6 +13,12 @@ export const Footer = styled.div`
     font-size: 12px;
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    p {
+      width: 340px;
+    }
+  }
 `
 
 export const FooterContainer = styled.div`
