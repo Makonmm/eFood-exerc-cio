@@ -1,13 +1,21 @@
 import styled from 'styled-components'
-import { breakpoints } from '../../styles'
 
 export const MenuListContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
+  max-width: 1024px;
 
-  @media (max-width: ${breakpoints.desktop}) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 16px;
     gap: 24px;
   }
 `

@@ -10,11 +10,9 @@ export type ButtonProps = {
 
 const Button = ({ name, children, onClick, first, type }: ButtonProps) => {
   return (
-    <>
-      <ButtonStyle name={name} onClick={onClick} first={first} type={type}>
-        {children}
-      </ButtonStyle>
-    </>
+    <ButtonStyle name={name} onClick={onClick} first={first} type={type}>
+      {children}
+    </ButtonStyle>
   )
 }
 

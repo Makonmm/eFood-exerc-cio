@@ -1,32 +1,55 @@
 import styled from 'styled-components'
-import bg from '../../assets/images/Vector.png'
+import headerB from '../../assets/images/Vector.png'
 import { colors } from '../../styles'
 
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
-  color: ${colors.vermelho};
+  color: ${colors.pink};
   font-weight: bold;
   line-height: 21px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+  }
 `
 
 export const Title = styled.h2`
-  margin-right: 340px;
-  width: 108px;
+  margin-bottom: 16px;
+  width: 100%;
   text-align: center;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    margin-right: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
 `
 
 export const CartButton = styled.h3`
-  margin-left: 193px;
-  width: 256px;
-  text-align: right;
+  width: 100%;
+  text-align: center;
   font-size: 18px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+    width: 100%;
+    text-align: center;
+  }
 `
 
 export const HeaderBackground = styled.div`
-  background-image: url(${bg});
+  background-image: url(${headerB});
   height: 186px;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `

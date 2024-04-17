@@ -12,7 +12,7 @@ const Tag = ({ destacado, tipo }: TagProps) => {
         <S.TagSpotlight destacado={destacado}>
           Destaque da semana
         </S.TagSpotlight>
-        <div>{tipo}</div>
+        <div>{tipo.toUpperCase()}</div>
       </S.TagStyled>
     </>
   )
