@@ -20,12 +20,15 @@ export const Footer = styled.div`
     }
   }
 `
-
 export const FooterContainer = styled.div`
   display: flex;
-  align-items: center;
-  padding: 40px 0;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
 `
 
 export const SocialMedias = styled.ul`

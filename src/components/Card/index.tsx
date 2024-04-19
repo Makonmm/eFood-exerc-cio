@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-
 import close from '../../assets/images/close.png'
 import star from '../../assets/images/estrela.png'
 import Tag from '../Tag'
@@ -73,6 +72,7 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
   const addToCart = () => {
     dispatch(add(item))
     dispatch(open())
+    setModalIsOpen(true)
   }
 
   return (
