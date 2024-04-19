@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
 import close from '../../assets/images/close.png'
 import star from '../../assets/images/estrela.png'
 import Tag from '../Tag'
@@ -8,6 +7,7 @@ import { ButtonStyle } from '../Button/styled'
 import Button from '../Button'
 import * as S from './styles'
 import { Restaurant, MenuItem } from '../../types/api'
+import { useDispatch } from 'react-redux'
 import { add, open } from '../../store/reducers/cart'
 
 export interface CardProps {
@@ -51,6 +51,15 @@ const RestaurantCard = ({ restaurant }: { restaurant: Restaurant }) => {
 
 const MenuItemCard = ({ item }: { item: MenuItem }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
+  const dispatch = useDispatch()
+
+  const openModal = () => setModalIsOpen(true)
+  const closeModal = () => setModalIsOpen(false)
+  const addToCart = () => {
+    dispatch(add(item))
+    setModalIsOpen(false)
+    dispatch(open())
+  }
 
   const getDescricao = (descricao: string) => {
     if (descricao.length > 132) {
@@ -67,24 +76,10 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
     }).format(preco)
   }
 
-  const dispatch = useDispatch()
-
-  const addToCart = () => {
-    dispatch(add(item))
-    dispatch(open())
-    setModalIsOpen(true)
-  }
-
   return (
     <>
       <S.CardContainer isrestaurant={false}>
-        <img
-          src={item.foto}
-          alt={item.nome}
-          onClick={() => {
-            setModalIsOpen(true)
-          }}
-        />
+        <img src={item.foto} alt={item.nome} onClick={openModal} />
         <S.CardInfo isrestaurant={false}>
           <S.CardHeader isrestaurant={false}>
             <h3>{item.nome}</h3>
@@ -92,7 +87,7 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
           <S.Description isrestaurant={false}>
             {getDescricao(item.descricao)}
           </S.Description>
-          <Button name="add" onClick={addToCart}>
+          <Button name="add" onClick={openModal}>
             Adicionar ao carrinho
           </Button>
         </S.CardInfo>
@@ -100,16 +95,9 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
 
       {modalIsOpen && (
         <>
-          <S.ModalContainer
-            className="container"
-            onClick={() => setModalIsOpen(false)}
-          >
+          <S.ModalContainer className="container" onClick={closeModal}>
             <div className="overlay"></div>
-            <img
-              src={close}
-              alt="Ícone de fechar"
-              onClick={() => setModalIsOpen(false)}
-            />
+            <img src={close} alt="Ícone de fechar" onClick={closeModal} />
             <S.ModalContent>
               <S.ModalImage src={item.foto} alt={item.nome} />
               <div>
@@ -122,10 +110,7 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
                 </p>
                 <ButtonStyle
                   name="add"
-                  onClick={() => {
-                    addToCart()
-                    setModalIsOpen(false)
-                  }}
+                  onClick={addToCart}
                 >{`Adicionar ao carrinho - ${formataPreco(
                   item.preco
                 )}`}</ButtonStyle>
