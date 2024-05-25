@@ -18,7 +18,7 @@
 2. Install dependencies:
 
    ```shell
-   cd Projet-ePlay
+   cd eFood_project
    npm install
    ```
 
