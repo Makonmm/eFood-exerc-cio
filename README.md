@@ -13,7 +13,7 @@
 
 1. Clone this repository:
    ```shell
-   git clone https://github.com/Makonmm/Projeto-ePlay.git](https://github.com/Makonmm/eFood-exerc-cio.git
+   git clone https://github.com/Makonmm/eFood_project.git
    ```
 2. Install dependencies:
 
